@@ -1,0 +1,29 @@
+{
+  "name": "react-validation-tiny",
+  "version": "0.1.0",
+  "description": "React simple input validation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaselNsralla/react-validation-tiny.git"
+  },
+  "keywords": [
+    "react",
+    "validation",
+    "input",
+    "form",
+    "post",
+    "json",
+    "customizable",
+    "simple"
+  ],
+  "author": "Basel Nsralla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BaselNsralla/react-validation-tiny/issues"
+  },
+  "homepage": "https://github.com/BaselNsralla/react-validation-tiny#readme"
+}
