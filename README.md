@@ -1,2 +1,2 @@
-# react-validation-tiny
-React simple form validation
+# React-validation-tiny
+React js simple form validation
