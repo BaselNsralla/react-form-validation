@@ -46,6 +46,7 @@ var Form = function (_Component) {
       var _this2 = this;
 
       e.preventDefault();
+      this.formData = {};
       var elemnet = document.getElementById(this.props.failMessageId);
       elemnet.innerHTML = '';
       var valid = true;
