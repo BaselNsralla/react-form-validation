@@ -38,7 +38,6 @@ var Form = function (_Component) {
   _createClass(Form, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      console.log(this.props.children);
       this._setUpValidators(this.props.children);
     }
   }, {
@@ -63,8 +62,6 @@ var Form = function (_Component) {
           } else {
             _this2.formData[name] = input;
           }
-
-          console.log(name, "TO " + input);
           if (!bool) {
             valid = false;
             failMessage = message;
@@ -100,7 +97,6 @@ var Form = function (_Component) {
 
       if (!Array.isArray(incommingChildren)) {
         if (incommingChildren.type.name !== 'Input') {
-          console.log('incommingChildren carries children that are  ', incommingChildren.props.children);
           return _react2.default.cloneElement(incommingChildren, {
             children: this._addPropsToChildren(incommingChildren.props.children, key)
           });
@@ -134,13 +130,10 @@ var Form = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this4 = this;
-
-      console.log("ALL CHILDREN BEFORE RENDER ", this.state.childrenWithProps);
       return _react2.default.createElement(
         'form',
         { onSubmit: function onSubmit(e) {
-            return _this4.submit(e);
+            this.submit(e);
           } },
         this.state.childrenWithProps
       );
