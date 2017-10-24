@@ -130,10 +130,12 @@ var Form = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this4 = this;
+
       return _react2.default.createElement(
         'form',
         { onSubmit: function onSubmit(e) {
-            this.submit(e);
+            return _this4.submit(e);
           } },
         this.state.childrenWithProps
       );
