@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _config = require('./config');
+
+var _config2 = _interopRequireDefault(_config);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -97,7 +101,8 @@ var Form = function (_Component) {
       var _this3 = this;
 
       if (!Array.isArray(incommingChildren)) {
-        if (incommingChildren.type.name !== 'Input') {
+        if (!_config2.default.formElements.includes(incommingChildren.type.name)) {
+          // !== 'Input'){
           return _react2.default.cloneElement(incommingChildren, {
             children: this._addPropsToChildren(incommingChildren.props.children, key)
           });
@@ -110,7 +115,8 @@ var Form = function (_Component) {
         });
       }
       return incommingChildren.map(function (child, i) {
-        if (child.type.name === 'Input') {
+        if (_config2.default.formElements.includes(child.type.name)) {
+          // === 'Input'){
           return _react2.default.cloneElement(child, {
             init: function init(validateFunction) {
               _this3.validators.push(validateFunction);
