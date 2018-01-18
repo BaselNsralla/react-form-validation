@@ -39,9 +39,7 @@ var Input = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.type !== 'submit') {
-        if (this.state[this.props.name] !== '' && this.props.required === true) {
-          this.props.init(this.validateInput);
-        }
+        this.props.init(this.validateInput);
       }
     }
   }, {

@@ -45,14 +45,26 @@ var Form = function (_Component) {
       this._setUpValidators(this.props.children);
     }
   }, {
+    key: '_prepareFailElement',
+    value: function _prepareFailElement(id) {
+      var element = void 0;
+      if (!id) {
+        element = document.createElement('div');
+        element.innerHTML = '';
+        return element;
+      }
+      element = document.getElementById(this.props.failMessageId);
+      element.innerHTML = '';
+      return element;
+    }
+  }, {
     key: 'submit',
     value: function submit(e) {
       var _this2 = this;
 
       e.preventDefault();
       this.formData = {};
-      var elemnet = document.getElementById(this.props.failMessageId);
-      elemnet.innerHTML = '';
+      var element = this._prepareFailElement(this.props.failMessageId);
       var valid = true;
       var failMessage = '';
       this.validators.forEach(function (validator, i) {
@@ -81,7 +93,7 @@ var Form = function (_Component) {
               //}
               _this2.props.onSubmit(e, _this2.formData);
             } else {
-              elemnet.innerHTML = failMessage;
+              element.innerHTML = failMessage;
             }
           }
         });
