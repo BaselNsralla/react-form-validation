@@ -6,7 +6,7 @@ React js simple form validation. This is a very light react frontend validation 
 ## Documentation:
 This module is base on three components `<Form> Beautiful children here </Form>`, `<Input />` and `<TextArea />`  
 
-* `<Form />` Has to be a parent of Input, not necessary the first.
+* `<Form />` Has to be a parent of Input/TextArea, not necessary the first.
 * `<Input />`
 * `<TextArea />`
 
@@ -77,10 +77,10 @@ ___
 | **`max`**            				| `number`      | `1000`      | Maximum length								   |
 | **`min`**                		| `number`      | `-1000`     | Minimum length								   |
 | **`regexToMatch`**          | `string`      | `'.*'`      | Pattern should be matched 			 |
-| **`regexNotToMatch`**       | `string`      | `?!.*`      | Pattern should not have a match  |
+| **`regexNotToMatch`**       | `string`      | `'?!.*'`      | Pattern should not have a match  |
 | **`customValidation`**      | `function`    | `void`      | Custom async validation 				 |
 | **`required`**              | `bool`        | `true`      | required HTML5									 |
-| **`type`**      						| `string`      | `text`  		| Input type in HTML5  				  	 |
+| **`type`**      						| `string`      | `'text'`  		| Input type in HTML5  				  	 |
 | **`value`**     						| `string`      | `''`   			| Initial value										 |
 | **`onChangeValidation`**    | `function`    | `null`      | every change validation callback |
 | **`onChangeValidationInterval`** | `number` | `2000`      | The interval for `onChangeValidation` |
