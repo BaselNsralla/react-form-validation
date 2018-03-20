@@ -38,18 +38,19 @@ will look like this:
 | onSubmit              | `function`    | `void`      | The function to run after validating the inputs|
 | className      			  | `string`      | `'-1'`   	  | class name	|
 
-
-### <Input /> and <TextArea />
+  
+  
+### `<Input />` and `<TextArea />`
 
 * `name` a string which can be used as an index, or even a namespace for inputs with same categories. `name` is used to index the `faileMessage` of an input in the `failMessages` object.
 	* All inputs with the same name will be in the same array.
 * `max` the max number of charecters constraint. 
 * `min` the min number of charecters constraint.
-* `validationFailMessage` a string which you can put some index or message `e.g` `"Phone number does not have charecters"` or whatever you want. It will basicly be one one of the `failMessages` in the `onSubmit`  `failMessages` parameter.
+* `validationFailMessage` a string which you can use as an index or message `e.g` `"Phone number does not have charecters"` or whatever you want. It will basicly be one one of the `failMessages` in the `onSubmit`  `failMessages` parameter.
 * `regexToMatch` the pattern the text must match to succeed.
 * `regexNotToMatch` the pattern that the text must never match.
 * `customValidation` A COOL function which you can add to check the input in your own way, it will have two parameters:  
-  	* `Current input value`
+  	* `Input` value.
   	* `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
 * `required` default `true`
 * `type` is the type of the input.
