@@ -1,6 +1,6 @@
 # React-validation-tiny :passport_control:
 React js simple form validation. This is a very light react frontend validation module which uses
-`textarea`, `input` tags as the text containers. With ability to handle asynchronous validations. Feel free to push more :)
+`textarea`, `input` tags as the text containers. With ability to handle asynchronous validations. Feel free to push more elements :)
 
 
 ## Documentation:
@@ -10,6 +10,7 @@ This module is base on three components `<Form> Beautiful children here </Form>`
 * `<Input />`
 * `<TextArea />`
 
+For styling, just use the *`style`* prop
 ___
 
 ### Props
@@ -37,8 +38,8 @@ ___
 
 | Attributes            | Type          | Default     | Description |
 | :---------            | :--:          | :-----      | :----------- |
-| onSubmit              | `function`    | `void`      | The function to run after validating the inputs|
-| className      			  | `string`      | `'-1'`   	  | class name	|
+| **`onSubmit`**              | `function`    | `void`      | The function to run after validating the inputs|
+| **`className`**      			  | `string`      | `'-1'`   	  | class name	|
 
 ___
   
@@ -69,8 +70,8 @@ ___
 
 #### Props table
 
-| Attributes            | Type          | Default     | Description |
-| :---------            | :--:          | :-----:     | :----------- |
+| Attributes            			| Type          | Default     | Description |
+| :---------            			| :--:          | :-----:     | :----------- |
 | **`name`**                  | `string`      | `'fieldx'+Date.now()`      | name of the field |
 | **`style`**                 | `style`       | `null`      | Button container custom styles   |
 | **`max`**            				| `number`      | `1000`      | Maximum length								   |
