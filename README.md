@@ -1,6 +1,6 @@
 # React-validation-tiny :passport_control:
 React js simple form validation. This is a very light react frontend validation module which uses
-`textarea`, `input` tags as the text containers. With ability to handle **asynchronous** validations. Feel free to push more elements :)
+`textarea`, `input` tags as the text containers. With ability to handle **asynchronous** validations :twisted_rightwards_arrows: . Feel free to push more elements :relaxed:
 
 
 ## Documentation:
