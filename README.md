@@ -14,7 +14,7 @@ This module is base on three components `<Form> Beautiful children here </Form>`
 
 ### Form
 
-* `onSubmit` is type function and will run after all the `Input` validators are done sending back some parameters to tell you about what happend.
+* `onSubmit` is type function and will run after all the `Input` validators are done sending back some parameters to tell you about what happend.  
 		* `e` the submit event
 		* `success` is `true` if all the validations passed, otherwise `false`.
 		* `formData` all the data from all the Inputs and TextAreas.
@@ -47,9 +47,9 @@ will look like this:
 * `validationFailMessage` a string which you can put some index or message `e.g` `"Phone number does not have charecters"` or whatever you want. It will basicly be one one of the `failMessages` in the `onSubmit`  `failMessages` parameter.
 * `regexToMatch` the pattern the text must match to succeed.
 * `regexNotToMatch` the pattern that the text must never match.
-* `customValidation` A COOL function which you can add to check the input in your own way, it will have two parameters:
-		* `Current input value`
-		* `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
+* `customValidation` A COOL function which you can add to check the input in your own way, it will have two parameters:  
+				* `Current input value`
+				* `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
 * `required` default `true`
 * `type` is the type of the input.
 * `value` the initial value, if you want that.
