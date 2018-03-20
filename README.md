@@ -15,10 +15,10 @@ This module is base on three components `<Form> Beautiful children here </Form>`
 ### Form
 
 * `onSubmit` is type function and will run after all the `Input` validators are done sending back some parameters to tell you about what happend.  
-		* `e` the submit event
-		* `success` is `true` if all the validations passed, otherwise `false`.
-		* `formData` all the data from all the Inputs and TextAreas.
-		* `failMessages`? `null` if success otherwise it will be an `object`  with arrays of fail. messages.
+	  * `e` the submit event
+	  * `success` is `true` if all the validations passed, otherwise `false`.
+	  * `formData` all the data from all the Inputs and TextAreas.
+	  * `failMessages`? `null` if success otherwise it will be an `object`  with arrays of fail. messages.
 * `className` is the react `className` of the form, default is `'-1'`
 * `children` to be validated.
 
@@ -41,15 +41,15 @@ will look like this:
 ### Input
 
 * `name` a string which can be used as an index, or even a namespace for inputs with same categories. `name` is used to index the `faileMessage` of an input in the `failMessages` object.
-	* All inputs with the same name will be in the same array in `faileMessage`
+	* All inputs with the same name will be in the same array.
 * `max` the max number of charecters constraint. 
 * `min` the min number of charecters constraint.
 * `validationFailMessage` a string which you can put some index or message `e.g` `"Phone number does not have charecters"` or whatever you want. It will basicly be one one of the `failMessages` in the `onSubmit`  `failMessages` parameter.
 * `regexToMatch` the pattern the text must match to succeed.
 * `regexNotToMatch` the pattern that the text must never match.
 * `customValidation` A COOL function which you can add to check the input in your own way, it will have two parameters:  
-				* `Current input value`
-				* `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
+	  * `Current input value`
+	  * `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
 * `required` default `true`
 * `type` is the type of the input.
 * `value` the initial value, if you want that.
@@ -65,7 +65,7 @@ will look like this:
 #### Props table
 
 | Attributes            | Type          | Default     | Description |
-| :---------            | :--:          | :-----:     | :----------- |
+| :---------            | :--:          | :-----      | :----------- |
 | name                  | `string`      | `'fieldx' + Date.now().toString()`      | name of the field |
 | style                 | `Style`       | `null`      | Button container custom styles   |
 | max            				| `number`      | `1000`      | Maximum length								   |
