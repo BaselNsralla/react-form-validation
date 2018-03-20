@@ -15,10 +15,10 @@ This module is base on three components `<Form> Beautiful children here </Form>`
 ### Form
 
 * `onSubmit` is type function and will run after all the `Input` validators are done sending back some parameters to tell you about what happend.  
-	  * `e` the submit event
-	  * `success` is `true` if all the validations passed, otherwise `false`.
-	  * `formData` all the data from all the Inputs and TextAreas.
-	  * `failMessages`? `null` if success otherwise it will be an `object`  with arrays of fail. messages.
+  	* `e` the submit event
+  	* `success` is `true` if all the validations passed, otherwise `false`.
+  	* `formData` all the data from all the Inputs and TextAreas.
+  	* `failMessages`? `null` if success otherwise it will be an `object`  with arrays of fail. messages.
 * `className` is the react `className` of the form, default is `'-1'`
 * `children` to be validated.
 
@@ -48,8 +48,8 @@ will look like this:
 * `regexToMatch` the pattern the text must match to succeed.
 * `regexNotToMatch` the pattern that the text must never match.
 * `customValidation` A COOL function which you can add to check the input in your own way, it will have two parameters:  
-	  * `Current input value`
-	  * `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
+  	* `Current input value`
+  	* `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
 * `required` default `true`
 * `type` is the type of the input.
 * `value` the initial value, if you want that.
