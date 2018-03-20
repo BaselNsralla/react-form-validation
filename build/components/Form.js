@@ -66,7 +66,7 @@ var Form = function (_Component) {
       this.formData = {};
       var element = this._prepareFailElement(this.props.failMessageId);
       var valid = true;
-      var failMessage = '';
+      var failMessages = {};
       this.validators.forEach(function (validator, i) {
         validator(function (bool, message, name, input) {
           if (_this2.formData[name]) {
@@ -81,19 +81,19 @@ var Form = function (_Component) {
           }
           if (!bool) {
             valid = false;
-            failMessage = message;
+            if (failMessages[name]) {
+              failMessages[name].push(message);
+            } else {
+              failMessages[name] = [message];
+            }
           }
           if (i === _this2.validators.length - 1) {
             if (valid) {
-              //TODO:
-              //if (this.props.action) {
-              // middleware.makeRequest(this.props.url, this.formData ,()=>{
-              //this.props.onSubmit(e)
-              //})
-              //}
-              _this2.props.onSubmit(e, _this2.formData);
+              //TODO:  if (this.props.action) { middleware.makeRequest(this.props.url, this.formData ,()=> this.props.onSubmit(e)}) }
+              _this2.props.onSubmit(e, true, _this2.formData, null);
             } else {
-              element.innerHTML = failMessage;
+              //element.innerHTML = failMessage;
+              _this2.props.onSubmit(e, false, _this2.formData, failMessages);
             }
           }
         });
@@ -153,7 +153,7 @@ var Form = function (_Component) {
 
       return _react2.default.createElement(
         'form',
-        { onSubmit: function onSubmit(e) {
+        { style: this.props.style, onSubmit: function onSubmit(e) {
             return _this4.submit(e);
           } },
         this.state.childrenWithProps
@@ -166,6 +166,7 @@ var Form = function (_Component) {
 
 Form.defaultProps = {
   className: '-1',
+  style: null,
   onSubmit: function onSubmit(e) {}
 };
 

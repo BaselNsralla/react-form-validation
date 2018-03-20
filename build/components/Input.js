@@ -32,6 +32,7 @@ var Input = function (_Component) {
     _this.value = _this.props.value;
     _this.validateInput = _this.validateInput.bind(_this);
     _this.saveToState = _this.saveToState.bind(_this);
+    _this.timeoutCheck = null;
     return _this;
   }
 
@@ -51,19 +52,22 @@ var Input = function (_Component) {
       var regex = new RegExp(this.props.regexToMatch, 'g');
       var revregex = new RegExp(this.props.regexNotToMatch, 'g');
       var name = this.props.name;
+      if (this.state[this.props.name] === '' && this.props.required === false) {
+        cb(true, null, name, input);return;
+      }
       if (!input.match(regex)) {
-        cb(false, this.props.validationFailMessage);
+        cb(false, this.props.validationFailMessage, name, input);
       } else if (input.match(revregex)) {
-        cb(false, this.props.validationFailMessage);
+        cb(false, this.props.validationFailMessage, name, input);
       } else if (input.length > this.props.max || input.length < this.props.min) {
-        cb(false, this.props.validationFailMessage);
+        cb(false, this.props.validationFailMessage, name, input);
       } else {
         this.props.customValidation(input, function (isValid) {
           //THIS WILL WAIT Untill u Validate against a server
           if (isValid) {
             cb(true, null, name, input);
           } else {
-            cb(false, _this2.props.validationFailMessage);
+            cb(false, _this2.props.validationFailMessage, name, input);
           }
         });
       }
@@ -71,23 +75,32 @@ var Input = function (_Component) {
   }, {
     key: 'saveToState',
     value: function saveToState(e) {
+      var _this3 = this;
+
       this.value = null;
+      clearTimeout(this.timeoutCheck);
       var _e$target = e.target,
           name = _e$target.name,
           value = _e$target.value;
 
       this.setState(_defineProperty({}, name, value));
+      if (this.props.onChangeValidation) {
+        this.timeoutCheck = setTimeout(function () {
+          return _this3.validateInput(_this3.props.onChangeValidation);
+        }, this.props.onChangeValidationInterval);
+      }
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       return _react2.default.createElement('input', {
+        style: this.props.style,
         className: this.props.className,
         name: this.props.name,
         onChange: function onChange(e) {
-          return _this3.saveToState(e);
+          return _this4.saveToState(e);
         },
         type: this.props.type,
         value: this.value ? this.value : this.state[this.props.name]
@@ -101,8 +114,10 @@ var Input = function (_Component) {
 Input.defaultProps = {
   max: 10000,
   min: -10000,
+  style: null,
+  onChangeValidationInterval: 2000,
   validateOn: 'submit',
-  validateAfter: 0,
+  onChangeValidation: null,
   validationFailMessage: 'Add you validation message',
   name: 'fieldx' + Date.now().toString(),
   type: 'text',
@@ -110,7 +125,7 @@ Input.defaultProps = {
   regexToMatch: ".*",
   regexNotToMatch: "(?!.*)",
   value: null,
-  required: false,
+  required: true,
   customValidation: function customValidation(input, next) {
     return next(true);
   }

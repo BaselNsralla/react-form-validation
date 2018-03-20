@@ -28,7 +28,10 @@ var TextArea = function (_Input) {
   function TextArea(props) {
     _classCallCheck(this, TextArea);
 
-    return _possibleConstructorReturn(this, (TextArea.__proto__ || Object.getPrototypeOf(TextArea)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (TextArea.__proto__ || Object.getPrototypeOf(TextArea)).call(this, props));
+
+    _this.saveToState = _this.saveToState.bind(_this);
+    return _this;
   }
 
   _createClass(TextArea, [{
@@ -37,6 +40,7 @@ var TextArea = function (_Input) {
       var _this2 = this;
 
       return _react2.default.createElement('textarea', {
+        style: this.props.style,
         className: this.props.className,
         name: this.props.name,
         onChange: function onChange(e) {
