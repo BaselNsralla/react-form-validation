@@ -33,7 +33,7 @@ ___
 ```
 
 
-##### Props table
+#### Props table
 
 | Attributes            | Type          | Default     | Description |
 | :---------            | :--:          | :-----      | :----------- |
@@ -67,7 +67,7 @@ ___
 * **`onChangeValidationInterval`** the interval for `onChangeValidation`, default to 2 seconds
 
 
-##### Props table
+#### Props table
 
 | Attributes            | Type          | Default     | Description |
 | :---------            | :--:          | :-----      | :----------- |
