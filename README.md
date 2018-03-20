@@ -14,7 +14,7 @@ ___
 
 ### Props
 
-#### Form
+#### `<Form />`
 
 - [x]  `onSubmit` is type function and will run after all the `Input` validators are done sending back some parameters to tell you about what happend.  
   	* `e` the submit event
@@ -25,8 +25,7 @@ ___
 - [x]  `children` to be validated.
 
 
-###### failMessages
-could look like this:
+###### failMessages example:
 ```javascript
 	{
 		numberoflife: ['Number should be of length 10', 'Potatos is not a number'],
