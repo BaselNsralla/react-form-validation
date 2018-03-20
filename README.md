@@ -70,19 +70,19 @@ ___
 #### Props table
 
 | Attributes            | Type          | Default     | Description |
-| :---------            | :--:          | :-----      | :----------- |
-| name                  | `string`      | `'fieldx' + Date.now().toString()`      | name of the field |
-| style                 | `Style`       | `null`      | Button container custom styles   |
-| max            				| `number`      | `1000`      | Maximum length								   |
-| min                		| `number`      | `-1000`     | Minimum length								   |
-| regexToMatch          | `string`      | `'.*'`      | Pattern should be matched 			 |
-| regexNotToMatch       | `string`      | `?!.*`      | Pattern should not have a match  |
-| customValidation      | `function`    | `void`      | Custom async validation 				 |
-| required              | `bool`        | `true`      | required HTML5									 |
-| type      						| `string`      | `text`  		| Input type in HTML5  				  	 |
-| value      						| `string`      | `''`   			| Initial value										 |
-| onChangeValidation    | `function`    | `null`      | every change validation callback |
-| onChangeValidationInterval | `number` | `2000`      | The interval for `onChangeValidation` |
+| :---------            | :--:          | :-----:     | :----------- |
+| **name**                  | `string`      | `'fieldx'+Date.now()`      | name of the field |
+| **style**                 | `Style`       | `null`      | Button container custom styles   |
+| **max**            				| `number`      | `1000`      | Maximum length								   |
+| **min**                		| `number`      | `-1000`     | Minimum length								   |
+| **regexToMatch**          | `string`      | `'.*'`      | Pattern should be matched 			 |
+| **regexNotToMatch**       | `string`      | `?!.*`      | Pattern should not have a match  |
+| **customValidation**      | `function`    | `void`      | Custom async validation 				 |
+| **required**              | `bool`        | `true`      | required HTML5									 |
+| **type**      						| `string`      | `text`  		| Input type in HTML5  				  	 |
+| **value**     						| `string`      | `''`   			| Initial value										 |
+| **onChangeValidation**    | `function`    | `null`      | every change validation callback |
+| **onChangeValidationInterval** | `number` | `2000`      | The interval for `onChangeValidation` |
 
 
 
