@@ -10,9 +10,11 @@ This module is base on three components `<Form> Beautiful children here </Form>`
 * `<Input />`
 * `<TextArea />`
 
-## Props
+___
 
-### Form
+### Props
+
+#### Form
 
 - [x]  `onSubmit` is type function and will run after all the `Input` validators are done sending back some parameters to tell you about what happend.  
   	* `e` the submit event
@@ -22,8 +24,9 @@ This module is base on three components `<Form> Beautiful children here </Form>`
 - [x]  `className` is the react `className` of the form, default is `'-1'`
 - [x]  `children` to be validated.
 
-##### failMessages
-will look like this:
+
+###### failMessages
+could look like this:
 ```javascript
 	{
 		numberoflife: ['Number should be of length 10', 'Potatos is not a number'],
@@ -31,16 +34,17 @@ will look like this:
 ```
 
 
-#### Props table
+##### Props table
 
 | Attributes            | Type          | Default     | Description |
 | :---------            | :--:          | :-----      | :----------- |
 | onSubmit              | `function`    | `void`      | The function to run after validating the inputs|
 | className      			  | `string`      | `'-1'`   	  | class name	|
 
+___
   
-  
-### `<Input />` and `<TextArea />`
+
+#### `<Input />` and `<TextArea />`
 
 * `name` a string which can be used as an index, or even a namespace for inputs with same categories. `name` is used to index the `faileMessage` of an input in the `failMessages` object.
 	* All inputs with the same name will be in the same array.
@@ -64,7 +68,7 @@ will look like this:
 * `onChangeValidationInterval` the interval for `onChangeValidation`, default to 2 seconds
 
 
-#### Props table
+##### Props table
 
 | Attributes            | Type          | Default     | Description |
 | :---------            | :--:          | :-----      | :----------- |
