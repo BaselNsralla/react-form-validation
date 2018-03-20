@@ -1,6 +1,6 @@
 # React-validation-tiny :passport_control:
 React js simple form validation. This is a very light react frontend validation module which uses
-`textarea`, `input` tags as the text containers. With ability to handle asynchronous validations. Feel free to push more elements :)
+`textarea`, `input` tags as the text containers. With ability to handle **asynchronous** validations. Feel free to push more elements :)
 
 
 ## Documentation:
@@ -53,9 +53,9 @@ ___
 * **`validationFailMessage`** a string which you can use as an index or message `e.g` `"Phone number does not have charecters"` or whatever you want. It will basicly be one one of the `failMessages` in the `onSubmit`  `failMessages` parameter.
 * **`regexToMatch`** the pattern the text must match to succeed.
 * **`regexNotToMatch`** the pattern that the text must never match.
-* **`customValidation`** A COOL function which you can add to check the input in your own way, it will have two parameters:  
+* **`customValidation`** A *COOL* function which you can add to check the input in your own way, it will have two parameters:  
   	* `Input` value.
-  	* `next` which is a callback that you should run when your validation is done and send it a parameter of `true` if success and `false` if not, 
+  	* `next` which is a callback that you should run when your custom validation is done and send it a parameter of `true` if success and `false` if not, 
 * **`required`** default `true`
 * **`type`** is the type of the input.
 * **`value`** the initial value, if you want that.
