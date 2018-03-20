@@ -13,7 +13,7 @@ This module is base on three components `<Form> Beautiful children here </Form>`
 For styling, just use the *`style`* prop
 ___
 
-### Props
+### Props:
 
 #### `<Form />`
 
