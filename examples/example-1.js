@@ -31,18 +31,18 @@ class App extends Component {
           required
             name= "lala"
             customValidation = {(input, next) => {this.customValidation(input, next, "lala")}}
-            validationFailMessage={"NO1"}
+            validationFailMessage={"Reason1"}
             onChangeValidation = {this.inputChangedValidationResult}
             regexToMatch = "\w+11"
           />
           <div>
             <Input
               required={false}
-              validationFailMessage= {"NO2"}
+              validationFailMessage= {"Reason2"}
               name ="lala2"
               customValidation = {(input, next) => {this.customValidation(input, next, "lala2")}}
               onChangeValidation = {this.inputChangedValidationResult}
-              regexToMatch = "\w+22"
+              regexToMatch = "^\w+22$"
             />
           </div>
           <Input type='submit' />

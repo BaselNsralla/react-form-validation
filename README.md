@@ -1,4 +1,4 @@
-# React-validation-tiny :passport_control:
+# React-validation-tiny
 React js simple form validation. This is a very light react frontend validation module which uses
 `textarea`, `input` tags as the text containers. With ability to handle **asynchronous** validations :twisted_rightwards_arrows: . Feel free to push more elements :relaxed:
 
@@ -22,7 +22,7 @@ ___
   	* `success` is `true` if all the validations passed, otherwise `false`.
   	* `formData` all the data from all the Inputs and TextAreas.
   	* `failMessages`? `null` if success otherwise it will be an `object`  with arrays of fail. messages.
-- [x]  **`className`** is the react `className` of the form, default is `'-1'`
+- [x]  **`className`** is the react `className` of the form, default is `'classic1'`
 - [x]  **`children`** to be validated.
 
 
@@ -39,7 +39,7 @@ ___
 | Attributes            | Type          | Default     | Description |
 | :---------            | :--:          | :-----      | :----------- |
 | **`onSubmit`**              | `function`    | `void`      | The function to run after validating the inputs|
-| **`className`**      			  | `string`      | `'-1'`   	  | class name	|
+| **`className`**      			  | `string`      | `'classic1'`   	  | class name	|
 
 ___
   
@@ -65,7 +65,7 @@ ___
   	* `failmessage`? `null` if succeeded
   	* `name`, the name of the input
   	* `value`, the value of the input
-* **`onChangeValidationInterval`** the interval for `onChangeValidation`, default to 2 seconds
+* **`onChangeValidationInterval`** the interval for `onChangeValidation`, defaults to 1 second.
 
 
 #### Props table
@@ -83,6 +83,6 @@ ___
 | **`type`**      						| `string`      | `'text'`  		| Input type in HTML5  				  	 |
 | **`value`**     						| `string`      | `''`   			| Initial value										 |
 | **`onChangeValidation`**    | `function`    | `null`      | every change validation callback |
-| **`onChangeValidationInterval`** | `number` | `2000`      | The interval for `onChangeValidation` |
-
+| **`onChangeValidationInterval`** | `number` | `1000`      | The interval for `onChangeValidation` |
+| **`className`**                  | `string` | `'claasic2'`    | The class name             |
 
