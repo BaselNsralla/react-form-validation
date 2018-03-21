@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _config = require('./config');
 
 var _config2 = _interopRequireDefault(_config);
@@ -164,8 +168,13 @@ var Form = function (_Component) {
   return Form;
 }(_react.Component);
 
+Form.propTypes = {
+  className: _propTypes2.default.string,
+  onSubmit: _propTypes2.default.func
+};
+
 Form.defaultProps = {
-  className: '-1',
+  className: 'claasic1',
   style: null,
   onSubmit: function onSubmit(e) {}
 };

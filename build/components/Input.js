@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -111,17 +115,33 @@ var Input = function (_Component) {
   return Input;
 }(_react.Component);
 
+Input.propTypes = {
+  max: _propTypes2.default.number,
+  min: _propTypes2.default.number,
+  onChangeValidationInterval: _propTypes2.default.number,
+  onChangeValidation: _propTypes2.default.func,
+  validationFailMessage: _propTypes2.default.string,
+  name: _propTypes2.default.string,
+  type: _propTypes2.default.string,
+  className: _propTypes2.default.string,
+  regexToMatch: _propTypes2.default.string,
+  regexNotToMatch: _propTypes2.default.string,
+  value: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  required: _propTypes2.default.bool,
+  customValidation: _propTypes2.default.func
+};
+
 Input.defaultProps = {
   max: 10000,
   min: -10000,
   style: null,
-  onChangeValidationInterval: 2000,
+  onChangeValidationInterval: 1000,
   validateOn: 'submit',
   onChangeValidation: null,
   validationFailMessage: 'Add you validation message',
   name: 'fieldx' + Date.now().toString(),
   type: 'text',
-  className: Date.now().toString(),
+  className: 'claasic2',
   regexToMatch: ".*",
   regexNotToMatch: "(?!.*)",
   value: null,
