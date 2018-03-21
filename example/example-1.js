@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Form, Input, TextArea} from './lib'
+import {Form, Input, TextArea} from '../lib'
 
 class App extends Component {
 
