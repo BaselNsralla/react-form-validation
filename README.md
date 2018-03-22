@@ -2,6 +2,11 @@
 React js simple form validation. This is a very light react frontend validation module which uses
 `textarea`, `input` tags as the text containers. With ability to handle **asynchronous** validations :twisted_rightwards_arrows: . Feel free to push more elements :relaxed:
 
+## Install
+
+```
+$ npm install react-validation-tiny -s
+```
 
 ## Documentation:
 This module is based on three components `<Form> Beautiful children here </Form>`, `<Input />` and `<TextArea />`  
@@ -28,9 +33,9 @@ ___
 
 ###### failMessages example:
 ```javascript
-	{
-		numberoflife: ['Number should be of length 10', 'Potatos is not a number'],
-	}
+  {
+  	numberoflife: ['Number should be of length 10', 'Potatos is not a number'],
+  }
 ```
 
 
