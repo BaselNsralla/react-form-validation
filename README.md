@@ -65,7 +65,7 @@ ___
 * **`type`** is the type of the input.
 * **`value`** the initial value, if you want that.
 * **`validationFailMessage`** the failing message. This will be sent in `failMessages` with the associativ `name` as the key.
-* **`onChangeValidation`** callback function that will run every time you make a change in the input field, the interval is defaulted to 2 seconds, it is restarted for every input.
+* **`onChangeValidation`** callback function that will run every time you make a change in the input field, the interval is defaulted to 1 second, it is restarted for every input.
   	* `sucess`, `true` if validation succeeded
   	* `failmessage`? `null` if succeeded
   	* `name`, the name of the input
