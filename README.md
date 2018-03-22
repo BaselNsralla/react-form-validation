@@ -25,7 +25,7 @@ ___
 
 #### `<Form />`
 
-- [x]  **`onSubmit`** is type function and will run after all the `Input` validators are done sending back some parameters to tell you about what happend.  
+- [x]  **`onSubmit`** is of type function and will run after all the `Input` validators are done, then it will send back some parameters to tell you about what happend.  
   	* `e` the submit event
   	* `success` is `true` if all the validations passed, otherwise `false`.
   	* `formData` all the data from all the Inputs and TextAreas.
@@ -56,8 +56,8 @@ ___
 
 * **`name`** a string which can be used as an index, or even a namespace for inputs with same categories. `name` is used to index the `faileMessage` of an input in the `failMessages` object.
 	* All inputs with the same name will be in the same array.
-* **`max`** the max number of charecters constraint. 
-* **`min`** the min number of charecters constraint.
+* **`max`** the max number of characters constraint. 
+* **`min`** the min number of characters constraint.
 * **`validationFailMessage`** a string which you can use as an index or message `e.g` `"Phone number does not have charecters"` or whatever you want. It will basicly be one one of the `failMessages` in the `onSubmit`  `failMessages` parameter.
 * **`regexToMatch`** the pattern the text must match to succeed.
 * **`regexNotToMatch`** the pattern that the text must never match.
@@ -67,8 +67,7 @@ ___
 * **`required`** default `true`
 * **`type`** is the type of the input.
 * **`value`** the initial value, if you want that.
-* **`validationFailMessage`** the failing message. This will be sent in `failMessages` with the associativ `name` as the key.
-* **`onChangeValidation`** callback function that will run every time you make a change in the input field, the interval is defaulted to 1 second, it is restarted for every input.
+* **`onChangeValidation`** a callback that will run every time you make a change in the input field, the interval is defaulted to 1 second, it is restarted for every input.
   	* `sucess`, `true` if validation succeeded
   	* `failmessage`? `null` if succeeded
   	* `name`, the name of the input
