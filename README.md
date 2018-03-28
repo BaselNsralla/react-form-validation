@@ -1,9 +1,6 @@
 # React-validation-tiny
 React js simple form validation. This is a very light react frontend validation module which uses
-`textarea`, `input` tags as the text containers.  
-It can also handle **asynchronous** validations :twisted_rightwards_arrows:  
-Feel free to push more elements.
-
+`textarea`, `input` tags as the text containers. It can also handle **asynchronous** validations :twisted_rightwards_arrows:
 
 [![npm](https://img.shields.io/npm/v/react-validation-tiny.svg?style=plastic)](https://www.npmjs.com/package/react-validation-tiny)
 
