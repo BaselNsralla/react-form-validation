@@ -1,6 +1,9 @@
 # React-validation-tiny
 React js simple form validation. This is a very light react frontend validation module which uses
-`textarea`, `input` tags as the text containers. With ability to handle **asynchronous** validations :twisted_rightwards_arrows: . Feel free to push more elements :relaxed:
+`textarea`, `input` tags as the text containers.  
+It can also handle **asynchronous** validations :twisted_rightwards_arrows:  
+Feel free to push more elements.
+
 
 [![npm](https://img.shields.io/npm/v/react-validation-tiny.svg?style=plastic)](https://www.npmjs.com/package/react-validation-tiny)
 
@@ -25,13 +28,13 @@ ___
 
 #### `<Form />`
 
-- [x]  **`onSubmit`** is of type function and will run after all the `Input` validators are done, then it will send back some parameters to tell you about what happend.  
+- **`onSubmit`** is of type function and will run after all the `Input` validators are done, then it will send back some parameters to tell you about what happend.  
   	* `e` the submit event
   	* `success` is `true` if all the validations passed, otherwise `false`.
   	* `formData` all the data from all the Inputs and TextAreas.
   	* `failMessages`? `null` if success otherwise it will be an `object`  with arrays of fail. messages.
-- [x]  **`className`** is the react `className` of the form, default is `'classic1'`
-- [x]  **`children`** to be validated.
+- **`className`** is the react `className` of the form, default is `'classic1'`
+- **`children`** to be validated.
 
 
 ###### failMessages example:
@@ -91,5 +94,5 @@ ___
 | **`value`**     						| `string`      | `''`   			| Initial value										 |
 | **`onChangeValidation`**    | `function`    | `null`      | every change validation callback |
 | **`onChangeValidationInterval`** | `number` | `1000`      | The interval for `onChangeValidation` |
-| **`className`**                  | `string` | `'claasic2'`    | The class name             |
-
+| **`className`**                  | `string` | `'classic2'`    | The class name             |
+| **`validationFailMessage`** | `string` | `'Failed'` | The message which tells you what failes | 
