@@ -63,7 +63,7 @@ ___
 * **`regexNotToMatch`** the pattern that the text must never match.
 * **`customValidation`** A *COOL* function which you can add to check the input in your own way, it will have two parameters:  
   	* `Input` value.
-  	* `next` which is a callback that you should run when your custom validation is done and send it a parameter of `true` if success otherwise `false`. 
+  	* `next` a callback that you should run when your custom validation is done and send it a parameter of `true` if success otherwise `false`. 
 * **`required`** default `true`
 * **`type`** is the type of the input.
 * **`value`** the initial value, if you want that.
