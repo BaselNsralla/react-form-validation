@@ -37,7 +37,7 @@ ___
 ###### failMessages example:
 ```javascript
   {
-  	numberoflife: ['Number should be of length 10', 'Potatos is not a number'],
+  	target_field: ['Number should be of length 10', 'Potatos is not a number'],
   }
 ```
 
